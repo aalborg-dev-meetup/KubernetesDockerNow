@@ -1,0 +1,21 @@
+{
+    "kind": "Service",
+    "apiVersion": "v1",
+    "metadata": {
+        "namespace": "aalborg-react",
+        "name": "example"
+    },
+    "spec": {
+        "selector": {
+            "app": "example"
+        },
+        "type": "LoadBalancer",
+        "ports": [
+            {
+                "protocol": "TCP",
+                "port": 80,
+                "targetPort": 3000
+            }
+        ]
+    }
+}

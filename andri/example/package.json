@@ -9,5 +9,8 @@
     "start": "next start"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "next": "^1.2.3"
+  }
 }

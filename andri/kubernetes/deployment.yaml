@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: example
+  namespace: aalborg-react
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: example
+    spec:
+      containers:
+      - name: example
+        image: gcr.io/andridk-154012/example
+        ports:
+        - containerPort: 3000

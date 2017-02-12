@@ -1,36 +1,35 @@
 import React, { PropTypes } from 'react'
+import 'isomorphic-fetch'
 import Link from 'next/link'
 
-import 'isomorphic-fetch'
-
-export default class IndexPage extends React.Component {
+export default class CharactersPage extends React.Component {
     static propTypes = {
         from: PropTypes.string,
-        planets: PropTypes.array
+        characters: PropTypes.array
     }
 
     static defaultProps = {
         from: 'nobody',
-        planets: []
+        characters: []
     }
 
     static async getInitialProps ({ req }) {
-        const res = await fetch('http://swapi.co/api/planets/')
+        const res = await fetch('http://swapi.co/api/people/')
         const json = await res.json()
 
-        return { planets: json.results, from: req ? 'server' : 'client' }
+        return { characters: json.results, from: req ? 'server' : 'client' }
     }
     render () {
         return (
             <div>
-                <h1>Star Wars Planets</h1>
+                <h1>Characters from Star Wars</h1>
                 <p>
-                    Try <Link href="/characters"><a>characters</a></Link>
+                    Try <Link href="/"><a>planets</a></Link>
                 </p>
                 <h2>All hail {this.props.from}</h2>
                 <ul>
-                    {this.props.planets.map((planet) => (
-                        <li key={planet.name}>{planet.name}</li>
+                    {this.props.characters.map((person) => (
+                        <li key={person.name}>{person.name}</li>
                     ))}
                 </ul>
             </div>

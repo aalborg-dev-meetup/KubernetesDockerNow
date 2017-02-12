@@ -14,7 +14,7 @@ export default class CharactersPage extends React.Component {
     }
 
     static async getInitialProps ({ req }) {
-        const res = await fetch('http://swapi.co/api/people/')
+        const res = await fetch('//swapi.co/api/people/')
         const json = await res.json()
 
         return { characters: json.results, from: req ? 'server' : 'client' }

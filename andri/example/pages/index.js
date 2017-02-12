@@ -15,7 +15,7 @@ export default class IndexPage extends React.Component {
     }
 
     static async getInitialProps ({ req }) {
-        const res = await fetch('http://swapi.co/api/planets/')
+        const res = await fetch('//swapi.co/api/planets/')
         const json = await res.json()
 
         return { planets: json.results, from: req ? 'server' : 'client' }

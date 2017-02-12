@@ -9,8 +9,8 @@
 
 ## Zeit's now.sh
 - `npm install -g now`
-
-## Heroku
+- `cd example`
+- `now`
 
 ## Docker
 This assumes you have Docker installed.
@@ -66,3 +66,5 @@ I like things tidy, so our little example project gets its own namespace on the 
 - `kubectl apply -f service.json`
 - Go into services for the 'aalborg-react' namespace and notice the external endpoint 
 - Scale!
+
+## Heroku

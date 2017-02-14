@@ -2,18 +2,18 @@
 ...and fast
 
 ## Our little example site
-- Uses Next.js
+- Uses [Next.js](https://github.com/zeit/next.js)
 - The entire site is defined from `pages/` and `components/`
 - Comes with its own web-server
 - Took 5 minutes (I can do a demo, if we have time)
 
-## Zeit's now.sh
+## Zeit's [now.sh](https://zeit.co/now)
 - `npm install -g now`
 - `cd example`
 - `now`
 
 ## Docker
-This assumes you have Docker installed.
+This assumes you have [Docker](http://www.docker.com) installed.
 
 - See `example/Dockerfile`.
 - To build:
